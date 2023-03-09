@@ -1,0 +1,71 @@
+#voltar{
+    width: 35px;
+    border-radius: 25px;
+}
+
+body{
+    background-color: #79a3d4;
+    
+}
+
+#moedas{
+    background-color: #CED6DF;
+    border-radius: 25px;
+    width: 300px;
+    height: 180px;
+}
+h1{
+    font-size: 20px;
+    text-align: center;
+}
+#media3notas{
+    background-color: #CED6DF;
+    border-radius: 25px;
+    width: 300px;
+    height: 180px;
+}
+
+#media{
+    background-color: #CED6DF;
+    border-radius: 25px;
+    width: 290px;
+    padding: 5px;
+    
+}
+
+#ress{
+    background-color: #CED6DF;
+    border-radius: 25px;
+    width: 290px;
+    padding: 3px; 
+
+}
+
+#imc{
+    background-color: #CED6DF;
+    border-radius: 25px;
+    width: 290px;
+    padding: 3px;
+}
+
+#indice{
+    background-color: #CED6DF;
+    border-radius: 25px;
+    width: 300px;
+    height: 180px;
+}
+
+#multiplicacao{
+    background-color: #CED6DF;
+    border-radius: 25px;
+    width: 300px;
+    height: 180px;
+}
+
+#multiplicar{
+    background-color: #CED6DF;
+    border-radius: 25px;
+    width: 290px;
+    padding: 3px;  
+}
+

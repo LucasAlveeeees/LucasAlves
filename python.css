@@ -1,0 +1,41 @@
+#media{
+    background-color: #CED6DF;
+    border-radius: 25px;
+    width: 300px;
+    height: 180px;
+    text-align: center;
+}
+body{
+    background-color: #79a3d4;
+    
+
+}
+
+#app{
+    background-color: #CED6DF;
+    border-radius: 25px;
+    width: 300px;
+    height: 180px;
+    text-align: center;
+    position: relative;
+    top: 200px;
+    width: 300px;
+} 
+
+#cotacao{
+    background-color: #CED6DF;
+    border-radius: 25px;
+    width: 300px;
+    height: 180px;
+    text-align: center;
+    position: relative;
+    top: 450px;
+    width: 300px;
+}  
+#voltar{
+    width: 35px;
+    border-radius: 25px;
+    position: relative;
+    top: 600px;
+    left: 50pxpx;
+}

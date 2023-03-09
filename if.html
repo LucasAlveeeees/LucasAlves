@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="jsico.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="paginajs.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos | JavaScript</title>
+</head>
+<body>
+    <div id="moedas">
+        <h1>Conversão de moedas.</h1>
+        Valor:<br><input type="number" name="valor" id="valor"><br>
+        Nome da moeda:<br><input type="text" name="moeda" id="moeda"><BR>
+        <input type="button" value="Converter" onclick="calcularmoeda()">
+    </div>
+    <div id="ress">
+
+    </div>
+    <script>
+        function calcularmoeda(){
+            let txtname = document.querySelector('#valor').value
+            let moeda = document.querySelector('#moeda').value
+            let res = document.querySelector('#ress')
+            let dolar = 5.19
+            let euro = 5.47 
+            let libra = 6.14
+            let btc = 114.990
+            let eth = 8.113
+            if (moeda == "euro" || moeda == "EURO" || moeda == "Euro"){
+                txtname = txtname*euro
+                res.innerHTML = `O valor convertido para Real é R$ ${txtname}`}
+            else if(moeda =="Dolar" || moeda == "dolar" || moeda == "DOLAR" || moeda=="Dólar" || moeda=="dólar" || moeda=="DÓLAR"){
+                txtname = txtname*dolar
+                res.innerHTML = `O valor convertido para Real é R$ ${txtname} `
+            }
+            else if(moeda == "Libra Esterlina" || moeda == "libra esterlina" || moeda == "LIBRA ESTERLINA" || moeda == "LibraEsterlina" || moeda == "libraesterlina" || moeda == "LIBRAESTERLINA"){
+                txtname = txtname*libra
+                res.innerHTML = `O valor convertido para Real é R$ ${txtname}`}
+
+            else if(moeda == "BITCOIN"||moeda=="bitcoin"||moeda=="BitCoin"||moeda=="BTC"||moeda=="btc"||moeda=="BTC"){
+                txtname = txtname*btc
+                res.innerHTML = `O valor convertido para Real é R$ ${txtname}`}
+            else if(moeda=='Ethereum' || moeda=='ethereum'||moeda=='ETHEREUM'||moeda == 'ETH'||moeda == 'eth' || moeda == 'Eth'){
+                txtname = txtname*eth
+                res.innerHTML = `O valor convertido para Real é R$ ${txtname}`
+            }
+            else if(moeda=''||txtname==''){
+                res.innerHTML = `Favor preencher todos os campos`
+            }
+            else{
+                res.innerHTML = `Moeda digitada não foi cadastrada em nosso banco de dados.`
+            }
+
+            
+        
+    
+    }
+    </script>
+
+    <div id="media3notas">
+        <h1>Calculo média aritmética</h1>
+        Qual a nota1:<input type="number" name="nota1" id="nota1"><br>
+        Qual a nota2:<input type="number" name="nota2" id="nota2"><br>
+        Qual a nota3:<input type="number" name="nota3" id="nota3">
+        <input type="button" value="Verificar" onclick="calcularmedia()">
+    </div>
+    <div id="media">
+
+    </div>
+    <script>
+        function calcularmedia(){
+            let nota1 = parseFloat(document.querySelector('#nota1').value)
+            let nota2 = parseFloat(document.querySelector('#nota2').value)
+            let nota3 = parseFloat(document.querySelector('#nota3').value)
+            let media_final = 7
+            let nota_final=(nota1+nota2+nota3)/3
+            let aproveitamento = nota_final*10
+            let nota_maxima=10
+            if(nota_final > nota_maxima){
+                media.innerHTML = `Algumas de suas notas foram digitadadas incorretamente.Você digitou nota1: ${nota1}.Nota2: ${nota2}.Nota3: ${nota3}`
+            }
+            else if(nota_final >= media_final){
+                media.innerHTML = `Parabéns você foi aprovado.Sua nota foi: ${nota_final} e seu aproveitamento foi: ${aproveitamento}% `
+            }
+        
+
+            else{
+                media.innerHTML= `<p>Infelizmente você foi reprovado sua nota foi ${nota_final}. E seu aproveitamento foi de ${aproveitamento}%</p>`
+            }
+        
+        }
+</script>
+
+<div id="indice">
+    <h1>Calcular IMC</h1>
+    Qual seu nome?<input type="text" name="nome" id="nome"><br>
+    Qual seu peso?  <input type="number" name="peso" id="peso"><br>
+    Qual sua altura?<input type="number" name="altura" id="altura">
+    <input type="button" value="CalcularIMC" onclick="calcularimc()">
+</div>
+<div id="imc">
+    
+</div>
+<script>
+function calcularimc(){
+    let peso = parseFloat(document.querySelector('#peso').value)
+    let altura = parseFloat(document.querySelector('#altura').value)
+    let nome = document.querySelector('#nome').value
+    let imc = document.querySelector('#imc')
+    let seuimc = peso/(altura*altura)
+    if(peso=="" || altura=="" || nome==""){
+        imc.innerHTML = `Você precisa informar todos os campos para cálculo.`}
+    
+    else if(seuimc < 17){
+        imc.innerHTML = `<strong>Cuidado</strong> ${nome}.Você está muito abaixo do peso.Seu peso atual é <strong>${peso}</strong>Kg.E seu IMC è ${seuimc}`}
+    else if (seuimc > 17 && seuimc <= 18.49){
+        imc.innerHTML = `Você está abaixo do peso ${nome}.Seu peso atual é <strong>${peso}</strong>Kg.E seu IMC è ${seuimc}`}
+    else if(seuimc > 18.50 && seuimc <= 24.99){
+        imc.innerHTML = `<strong>Parabéns</strong> ${nome}.Você está no peso ideal.Seu peso atual é <strong>${peso}</strong>Kg.E seu IMC è ${seuimc}`}
+    else if(seuimc >= 25 && seuimc <=29.99){
+        imc.innerHTML = `Você está acima do peso ${nome}.Seu peso atual é ${peso}Kg.E seu IMC è ${seuimc}`}
+    else if(seuimc >= 30 && seuimc <= 34.99){
+        imc.innerHTML = `Você está em estado Obesidade I ${nome}.Seu peso atual é ${peso}Kg.E seu IMC è ${seuimc}`}
+    else if(seuimc >= 35 && seuimc <= 39.99){
+        imc.innerHTML=`Você está em Obesidade II(severa) ${nome}.<strong>Cuidado</strong>isso pode afetar sua saúde.Seu peso atual é ${peso}Kg.E seu IMC è ${seuimc}`}
+    else if(seuimc > 40){
+        imc.innerHTML=`Você está em Obesidade III(mórbida) ${nome}.<strong>Cuidado</strong>isso pode afetar sua saúde.Seu peso atual é ${peso}Kg.E seu IMC é ${seuimc}`
+    }
+}
+
+
+
+    
+</script>
+<div id="multiplicacao">
+    <h1>Conta de multiplicação</h1>
+    Qual valor1?<input type="number" name="valor1" id="valor1"><br>
+    Qual valor2?<input type="number" name="valor2" id="valor2">
+    <input type="button" value="Multiplicar" onclick="multiplicacao()">
+</div>
+<div id="multiplicar">
+
+</div>
+<script>
+function multiplicacao(){
+    let valor1 = parseFloat(document.querySelector('#valor1').value)
+    let valor2 = parseFloat(document.querySelector('#valor2').value)
+    let soma = valor1*valor2
+    multiplicar.innerHTML = `A multiplicação entre ${valor1} e ${valor2} é ${soma}`
+}
+
+
+
+</script>
+<fotter><br><br><a href="index.html"><abbr title="Voltar página principal"><img id="voltar" src="voltar.png" alt=""></abbr></a></fotter>
+
+</body>
+</html>
