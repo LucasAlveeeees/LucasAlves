@@ -1,0 +1,291 @@
+
+@keyframes animacao {
+    from{width: 250px;}
+}
+
+@keyframes animacao2{
+    0%{}
+    25%{margin-bottom: 380px; background-color: violet;}
+    50%{margin-bottom: 200px; background-color: blueviolet;}
+    75%{margin-bottom: 540px; background-color: tomato;}
+    100%{margin-top: 10px; background-color: yellowgreen;}
+}
+
+@keyframes animacao3{
+    0%{}
+    25%{margin-top: 80px; background-color: rgb(143, 238, 130);}
+    50%{margin-top: 100px; background-color:teal;}
+    75%{margin-top: 120px; background-color: springgreen;}
+    100%{margin-top: 10px; background-color: slateblue;}
+}
+
+@keyframes animacao4{
+    0%{}
+    50%{width: 500px;}
+    80%{width: 250px;}
+    100%{}
+}
+*{
+    width: auto;
+}
+
+
+body{
+    background-color: rgba(20, 19, 19, 0.966);
+    /*Container principal*/
+}
+.container-principal{
+    background-color: #0c0c0e;
+    width: calc(25%);
+    height:600px;
+    margin: 0;
+    position: fixed;
+    border-radius: 10px;
+    margin-top: 12px;
+    margin-left: 25px;
+    animation-name: animacao;
+    animation-duration: 5s;
+
+}
+
+#container-1 h1,#container-2 h1,#container p{
+    color: white;
+    text-align: center;
+}
+
+#img-principal {
+    width: 250px;
+    margin-left: 60px;
+    border-radius: 35px;
+    padding-top: 10px;
+    
+
+    
+}
+
+
+.container-imgs{
+    width: 20px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 30px;
+    animation-name: animacao3;
+    animation-duration: 3s;
+}
+
+.container-imgs:hover{
+    width: 50px;
+    transition: 1s;
+    
+}
+/*Containers subprincipais*/
+
+#container-1{
+    background-color: black;
+    height:730px;
+    width: calc(60%);
+    margin-left: calc(35%);
+    margin-top: 25px;
+    animation-name: animacao;
+    animation-duration: 5s;
+    border-radius: 10px;
+    animation-name: animacao4;
+    animation-duration: 2s;
+
+}
+#container-2{
+    background-color: black;
+    height:600px;
+    width: calc(60%);
+    margin-left: calc(35%);
+    margin-top: 25px;
+    animation-name: animacao;
+    animation-duration: 5s;
+    border-radius: 10px;
+}
+
+#container-3{
+    background-color: black;
+    height:600px;
+    width: calc(60%);
+    margin-left: calc(35%);
+    margin-top: 25px;
+    margin-bottom: 25px;
+    animation-name: animacao;
+    animation-duration: 5s;
+    border-radius: 10px;
+}
+
+    /*Conteudo das div*/
+
+    #container-1 h2{
+        color: #f2f2fa;
+        padding: 10px;
+        padding-left: 25px;
+        font-size: 25px;
+        animation-name: animacao3;
+        animation-duration: 3s;
+        
+    }
+
+    #container-2 h2{
+        color: #f2f2fa;
+        padding: 10px;
+        padding-left: 25px;
+        font-size: 25px;
+        animation-name: animacao3;
+        animation-duration: 3s;
+    }
+
+    #container-3 h2{
+        color: #f2f2fa;
+        padding: 10px;
+        padding-left: 25px;
+        font-size: 25px;
+    }
+
+    #container-1 li{
+        color: #f2f2fa;
+        animation-name: animacao3;
+    animation-duration: 3s;
+    }
+
+    #container-2 li{
+        color: #f2f2fa;
+        animation-name: animacao3;
+    animation-duration: 3s;
+    }
+
+    #container-3 li{
+        color: #f2f2fa;
+        animation-name: animacao3;
+    animation-duration: 3s;
+    }
+    
+    .container-principal a{
+        text-decoration: none;
+        color: rgb(10, 10, 10);
+        text-align: center;
+    }
+
+    .container-principal button{
+        margin-left: 140px;
+    }
+
+    .container-principal button:hover{
+        background-color: red;
+    }
+
+    .animacao{
+        display: flex;
+        background-color: black;
+        width: 100%;
+    }
+
+    .box{
+        height: 100px;
+        /*flex: 1 1 300px; /*ShortHand 1== grow 1==shrink 300px == basis*/
+        width: 100px;
+    }
+
+    .first{
+        background-color: red;
+        /*flex: 2 1 300px;*/
+        animation-name: animacao3;
+        animation-duration: 15s;
+
+       
+    
+    }
+    
+    .second {
+        background-color: green;
+        animation-name: animacao2;
+        animation-duration: 15s;
+        
+        
+        
+    }
+    .third {
+        background-color: blue;
+        animation-name: animacao2;
+        animation-duration: 15s;
+        
+        
+    }
+    
+    
+
+    
+
+
+    @media(max-width: 1280px){
+        #img-principal {
+            width: 80px;
+            margin-left: 5px;
+            border-radius: 35px;
+            padding-top: 10px;
+        }
+
+        .container-principal{
+            background-color: #0c0c0e;
+            width: calc(25%);
+            height:600px;
+            position: fixed;
+            border-radius: 10px;
+            margin-top: 12px;
+            margin-left: 5px;
+            animation-name: animacao;
+            animation-duration: 5s;
+        }
+
+        #container-1 h2{
+            color: #f2f2fa;
+            margin-left: -40px;
+    
+        }
+
+        .container-imgs{
+            width: 25px;
+            margin-bottom: 5px;
+            border-radius: 30px;
+        
+        }
+
+        #container-2 h2{
+            color: #f2f2fa;
+            padding: 10px;
+            padding-left: 3px;
+            font-size: 25px;
+        }
+        
+        #container-3 h2{
+            color: #f2f2fa;
+            padding: 10px;
+            padding-left: 3px;
+            font-size: 12px;
+        }
+
+        #container-1{
+            height: 1200px;
+        }
+
+        #container-2{
+            height: 820px;
+        }
+
+        .container-principal button{
+            margin-left: 10px;
+        }
+
+        
+        
+
+        
+
+    }
+
+
+    
+
+
